@@ -10,8 +10,9 @@ namespace Valve.VR.Extras
 
         //public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.__actions_default_in_InteractUI;
         public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.GetBooleanAction("InteractUI");
+        public SteamVR_Action_Boolean laserActivate = SteamVR_Input.GetBooleanAction("Laser");
 
-        public bool active = true;
+        public bool active = false;
         public Color color;
         public float thickness = 0.002f;
         public Color clickColor = Color.green;
@@ -46,7 +47,7 @@ namespace Valve.VR.Extras
             pointer = GameObject.CreatePrimitive(PrimitiveType.Cube);
             pointer.transform.parent = holder.transform;
             pointer.transform.localScale = new Vector3(thickness, thickness, 100f);
-            pointer.transform.localPosition = new Vector3(0f, 0f, 50f);
+            pointer.transform.localPosition = new Vector3(0f, 50f, 50f);
             pointer.transform.localRotation = Quaternion.identity;
             BoxCollider collider = pointer.GetComponent<BoxCollider>();
             if (addRigidBody)
@@ -91,11 +92,27 @@ namespace Valve.VR.Extras
 
         private void Update()
         {
+
+            if (laserActivate.state == true && active == false)
+            {
+
+                gameObject.SetActive(true);
+
+            }
+            else if (laserActivate.state == true && active == true)
+            {
+
+                gameObject.SetActive(false);
+
+            }
+
+            /*
             if (!isActive)
             {
                 isActive = true;
                 this.transform.GetChild(0).gameObject.SetActive(true);
             }
+            */
 
             float dist = 100f;
 
