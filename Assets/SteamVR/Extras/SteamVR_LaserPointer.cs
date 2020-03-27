@@ -1,11 +1,14 @@
 ﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
 using UnityEngine;
 using System.Collections;
+using Valve.VR;
 
 namespace Valve.VR.Extras
 {
     public class SteamVR_LaserPointer : MonoBehaviour
     {
+
+        [SerializeField] SteamVR_Input_Sources handType;
         public SteamVR_Behaviour_Pose pose;
 
         //public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.__actions_default_in_InteractUI;
@@ -19,6 +22,8 @@ namespace Valve.VR.Extras
         public GameObject holder;
         public GameObject pointer;
         bool isActive = false;
+        Color newAlpha;
+
         public bool addRigidBody = false;
         public Transform reference;
         public event PointerEventHandler PointerIn;
@@ -68,7 +73,10 @@ namespace Valve.VR.Extras
             }
             Material newMaterial = new Material(Shader.Find("Unlit/Color"));
             newMaterial.SetColor("_Color", color);
-            pointer.GetComponent<MeshRenderer>().material = newMaterial;
+            pointer.GetComponent<MeshRenderer>().material = newMaterial;  
+
+            
+
         }
 
         public virtual void OnPointerIn(PointerEventArgs e)
@@ -93,16 +101,20 @@ namespace Valve.VR.Extras
         private void Update()
         {
 
-            if (laserActivate.state == true && active == false)
+            if (laserActivate.lastStateDown && active == false)
             {
 
                 gameObject.SetActive(true);
+                newAlpha.a = 1;
+                pointer.GetComponent<MeshRenderer>().material.color = newAlpha;
 
             }
-            else if (laserActivate.state == true && active == true)
+            else if (laserActivate.lastStateDown && active == true)
             {
 
                 gameObject.SetActive(false);
+                newAlpha.a = 0;
+                pointer.GetComponent<MeshRenderer>().material.color = newAlpha;
 
             }
 
@@ -182,4 +194,5 @@ namespace Valve.VR.Extras
     }
 
     public delegate void PointerEventHandler(object sender, PointerEventArgs e);
+
 }
