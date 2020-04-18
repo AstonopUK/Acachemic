@@ -150,11 +150,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ControlSys: 0
-  DesktopPlayer: {fileID: 5406052735354499179, guid: 324345839a5d9b14d858a6d3fbb5cdcc,
+  DesktopPlayer: {fileID: 8523539868679952997, guid: a1d938bb3be5d61469af93070970dfd7,
     type: 3}
   VRPlayer: {fileID: 2478167695549690261, guid: e441a3921a2c1d74b8cb85d435e100b2,
     type: 3}
   Click: {fileID: 476656262}
+  spawnCheck: 0
 --- !u!4 &264378350
 Transform:
   m_ObjectHideFlags: 0
