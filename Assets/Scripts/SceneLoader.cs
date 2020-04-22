@@ -87,7 +87,7 @@ public class SceneLoader : MonoBehaviour
 
         Debug.Log("Entered collision with " + collision.gameObject.name);
 
-        if (collision.gameObject.tag == "Hand")
+        if (collision.gameObject.tag == "Hand" || collision.gameObject.tag == "Player")
         {
 
             LoadScene();

@@ -31,6 +31,14 @@ public class DeskPlayerInteraction : MonoBehaviour
                 isInteract = (hit.collider.tag == "Clickable");
                 Debug.Log("Interacted with " + hit.collider.name);
 
+                if (isInteract)
+                {
+
+                    Interaction intEff = hit.collider.gameObject.GetComponent<Interaction>();
+                    intEff.runOperation();
+
+                }
+
             }
 
         }

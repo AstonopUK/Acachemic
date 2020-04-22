@@ -1,0 +1,9 @@
+Hydrogen
+
+Shell structure : 1
+
+With a standard atomic weight of 1.008, hydrogen is the lightest element in the periodic table. Hydrogen is the most abundant chemical substance in the Universe, constituting roughly 75% of all baryonic mass. Non-remnant stars are mainly composed of hydrogen in the plasma state. The most common isotope of hydrogen, termed protium (name rarely used, symbol 1H), has one proton and no neutrons.
+
+Hydrogen gas was first artificially produced in the early 16th century by the reaction of acids on metals. In 1766–81, Henry Cavendish was the first to recognize that hydrogen gas was a discrete substance, and that it produces water when burned, the property for which it was later named: in Greek, hydrogen means "water-former".
+
+Industrial production is mainly from steam reforming natural gas, and less often from more energy-intensive methods such as the electrolysis of water. Most hydrogen is used near the site of its production, the two largest uses being fossil fuel processing (e.g., hydrocracking) and ammonia production, mostly for the fertilizer market. Hydrogen is problematic in metallurgy because it can embrittle many metals, complicating the design of pipelines and storage tanks.
