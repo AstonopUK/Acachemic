@@ -9,6 +9,8 @@ TagManager:
   - Debug
   - Hand
   - Clickable
+  - PauseMenu
+  - SettingsMenu
   layers:
   - Default
   - TransparentFX

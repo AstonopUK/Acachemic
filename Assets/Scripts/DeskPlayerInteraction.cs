@@ -12,7 +12,8 @@ public class DeskPlayerInteraction : MonoBehaviour
     void Awake()
     {
 
-        
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
 
@@ -42,6 +43,8 @@ public class DeskPlayerInteraction : MonoBehaviour
             }
 
         }
+
+        
 
     }
 
